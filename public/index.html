@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- necessary libraries -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+    <title>CodeFlow</title>
+</head>
+<body>
+    <div class="logo-title">
+        <h1 class="title">{codeflow}</h1>
+    </div>
+    <div class="join-cntr">
+        <h1>Join Room</h1>
+        <input id="username" type="text" placeholder="Your Name">
+        <input id="roomid" type="text" placeholder="Room ID">
+        <button onclick="joinRoom()" class="join-room-btn">Join</button>
+        <div class="new-room-cntr">
+            <p>Doesn't have room ID?</p>
+            <button onclick=generateRoomID() class="new-room-btn">Create new room</button>
+        </div>
+        <p id="copy-msg-alert">copied!</p>
+        <div id="new-room-id-cntr"><p id="newRoomID"></p><button onclick="copyNewRoomID()" class="copy-new-room-id-btn"><img src="./images/copy.png" alt=""></button></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "name": "codeflow",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bogdan-Lyashenko/js-code-to-svg-flowchart.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js webpack --progress --colors --watch --env dev",
+    "start": "node index.js",
+    "build": "NODE_ENV=production webpack --progress",
+    "babel-compile": "babel src -d build --copy-files",
+    "pretty": "prettier  --write \"./src/**/*.js\" \"./cli/*.js\""
+  },
+  "bin": {
+    "js2flowchart": "./cli/index.cli.js"
+  },
+  "keywords": [
+    "svg",
+    "code analyzeing",
+    "webpack",
+    "es6",
+    "library",
+    "universal",
+    "umd",
+    "commonjs"
+  ],
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket-io": "^1.0.0",
+    "socket.io": "^4.7.5",
+    "@babel/generator": "^7.22.10",
+    "@babel/parser": "^7.22.10",
+    "@babel/traverse": "^7.22.10",
+    "commander": "^11.0.0",
+    "deepmerge": "^4.3.1",
+    "global": "^4.4.0",
+    "string-width": "^6.1.0",
+    "xml-escape": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "babel-loader": "^9.1.3",
+    "buffer": "^6.0.3",
+    "prettier": "3.0.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: rgb(255, 255, 255);
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(25, 23, 36);
+    overflow: hidden;
+}
+
+/* utility section */
+.utils{
+    width: 51vh;
+    margin-left: 10px;
+}
+/* Shows joined players */
+#ninjas{
+    background: rgba(255, 255, 255, 0);
+    border: 0.3px solid rgba(255, 255, 255, 0.174);
+    border-radius: 20px;
+    width: 25vh;
+    height: 3vh;
+    display: inline-block;
+    transform: translateY(12px);
+    margin-left: 2px;
+}
+/* Logo of each joined user */
+.ninja{
+    background: #edca05;
+    width: 2.8vh;
+    height: 2.8vh;
+    border-radius: 30px;
+    float: left;
+    margin-left: 1px;
+    /* visibility: hidden; */
+}
+.ninja p{
+    text-align: center;
+    padding-top: 2.5px;
+    color: rgb(255, 255, 255);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+/* Programming language */
+#language-select{
+    background: rgba(37, 37, 50, 0);
+    padding: 6px;
+    width: 11vh;
+    font-family: "Source Code Pro", monospace;
+    color: rgb(190, 189, 189);
+    border-radius: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+    transform: translateY(5px);
+    font-size: 13px;
+    outline: none;
+    border: 1px solid rgba(204, 204, 204, 0.504);
+    display: inline-block;
+}
+/* Run code button */
+.run-code{
+    background: none;
+    outline: none;
+    border: none;
+    transform: translateY(8px);
+    margin-left: 8px;
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+/* Coding and flowchart area starts */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+/* Coding area */
+.code-container {
+    margin-top: 1vh;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+#code-input {
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    line-height: 20px;
+    border-radius: 10px;
+}
+.column {
+    flex: 1;
+    border-left: 1px solid #342b43;
+}
+/* Flowchrt area */
+#svgImage {
+    background: rgb(255, 255, 255);
+    margin: 0;
+    overflow: auto;
+    margin-top: 1.7vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 97.5vh;
+    height: 93vh;
+    border-radius: 10px;
+    z-index: -1;
+    position: absolute;
+}
+/* User joined popup */
+.joined-info{
+    background: rgb(39, 36, 72);
+    width: 34vh;
+    height: 7vh;
+    top: 87vh;
+    left: 65vh;
+    border-radius: 5px;
+    padding: 2vh;
+    position: relative;
+    visibility: hidden;
+    animation: fadeIn 1s, slideIn .8s linear, fadeOut 3s, hide;
+}
+.joined-info p{
+    text-align: center;
+    margin-top: 0.5vh;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 17px;
+}
+/* User joined popup animation */
+@keyframes slideIn {
+    0% {
+      visibility: visible;  
+      transform: translateX(400px);
+      animation-timing-function: ease-out;
+    }
+    60% {
+        visibility: visible; 
+      transform: translateX(-30px);
+      animation-timing-function: ease-in;
+    }
+    80% {
+        visibility: visible; 
+      transform: translateX(10px);
+      animation-timing-function: ease-out;
+    }
+    100% {
+        visibility: visible; 
+      transform: translateX(0px);
+      animation-timing-function: ease-in;
+    }
+} 
+@keyframes fadeIn {
+    0% {
+        visibility: visible; 
+      opacity: 0;
+    }
+    100% {
+        visibility: visible; 
+      opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    0% {
+        visibility: visible; 
+        opacity: 1;
+    }
+    60%{
+        visibility: visible; 
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden; 
+        opacity: 0;
+    }
+}
+
+/* Download flowchart button */
+#downloadFile {
+    position: fixed;
+    right: 20px;
+    top: 7px;
+    padding: 5px 10px;
+    background: transparent;
+    outline: none;
+    font-weight: bold;
+    border: none;
+    color: #5054d1;
+    font-family: sans-serif;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Codemirror style */
+.CodeMirror{
+    height: 100%;
+    line-height: 1.5;
+}
+@media all and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Display output */
+#output{
+    width: 98%;
+    height: 14vh;
+    background: rgb(37, 37, 50);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+#output p{
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    margin-left: 11px;
+    padding-top: 8px;
+}
+#stdout-output{
+    margin-top: 8px;
+    margin-left: 12px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: rgb(190, 189, 189);
+}

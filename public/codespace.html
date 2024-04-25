@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Codeflow</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./codespace.css">
+
+        <!-- necessary libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.31.0/mode/javascript/javascript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+        <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+        <link rel="stylesheet" href="./codemirror-5.65.16/lib/codemirror.css">
+        <link rel="stylesheet" href="./codemirror-5.65.16/theme/dracula.css">
+        <script src="./codemirror-5.65.16/lib/codemirror.js"></script>
+
+    </head>
+    <body>
+
+    <div class="utils">
+        <!-- Shows joined players -->
+        <div id="ninjas">
+            
+        </div>
+
+        <!-- Programming language -->
+        <button id="language-select" onchange="updateBoilerplate()">JavaScript</button>
+    
+        <!-- Run Button -->
+        <button class="run-code" onclick="runCode()">
+            <img src="./images/run-code.png" alt="">
+        </button>
+        
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <!-- Code Input -->
+            <div class="code-container">
+                <div id="code-input" rows="10" cols="50" placeholder="Enter your code here..." oninput="updateBoilerplate()"></div>
+            </div> 
+ 
+            <!-- Output Display -->
+            <div id="output">
+                <p>Output</p>
+                <textarea id="stdout-output" rows="4" cols="93" placeholder="">Output will appear here...</textarea>
+            </div>
+        </div>
+        <!-- Download flowchart -->
+        <button id="downloadFile"><img src="./images/download-flowchart.png" alt=""></button>
+        <div class="column">
+            <!-- Display flowchart -->
+            <p id="svgImage">
+                <!-- Joined player popup -->
+                <div class="joined-info">
+                    <p>Ninja has joined!</p>
+                </div>
+            </p>
+        </div>
+    </div>
+
+
+    <script src="./codemirror-5.65.16/mode/clike/clike.js"></script>
+    <script src="./codemirror-5.65.16/mode/python/python.js"></script>
+    <script src="./codemirror-5.65.16/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+    <script type="javascript" src="/index.js"></script>
+    <script src="./script.js"></script>
+
+    </body>
+</html>

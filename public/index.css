@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logo-title{
+    width: 43vh;
+    height: 7vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    font-family: "Inconsolata", Consolas, monospace;
+    font-size: 54px;
+    font-weight: 860;
+    margin-top: 14vh;
+    letter-spacing: 7px;
+    overflow: hidden;
+    border-right: 7px solid #23c526;
+    white-space: nowrap;
+    color: white;
+    width: 100%;
+    animation: typing 2s steps(10) infinite alternate,
+               cursor .6s step-end;
+}
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+@keyframes cursor{
+    50% { border-color: transparent;}
+}
+body{
+    color: rgb(20, 19, 19);
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(25, 23, 36);
+}
+.join-cntr{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9vh;
+    background: rgba(212, 212, 212, 0.092);
+    border: 0.2px solid rgba(255, 255, 255, 0.918);
+    padding: 5vh;
+    color: white;
+    width: 50vh;
+    height: 41.5vh;
+    border-radius: 10px;
+}
+.join-cntr h1{
+    margin-bottom: 21px;
+    font-size: 22px;
+    font-weight: 400;
+}
+#username{
+    width: 38vh;
+    height: 4vh;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    padding-left: 0.5vh;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+#roomid{
+    width: 38vh;
+    height: 4vh;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    padding-left: 0.5vh;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+::placeholder{
+    font-size: 12px;
+    font-weight: lighter;
+    color: rgb(160, 160, 160);
+}
+.join-room-btn{
+    width: 12vh;
+    height: 4vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    outline: none;
+    border: none;
+    background: rgb(35, 197, 38);
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 2px;
+}
+.join-room-btn:hover{
+    cursor: pointer;
+}
+.new-room-cntr{
+    width: 40vh;
+    height: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vh;
+    margin-top: 2vh;
+}
+.new-room-cntr p{
+    font-size: 12px;
+    width: 45%;
+    float: left;
+    padding-left: 0%;
+}
+.new-room-cntr .new-room-btn{
+    float: left;
+    width: 50%;
+    font-size: 12px;
+    width: 12vh;
+    outline: none;
+    border: none;
+    background: none;
+    color: rgb(35, 197, 38);
+    font-family: "Ubuntu", sans-serif;
+}
+.new-room-btn:hover{
+    cursor: pointer;
+    border-bottom: 1px solid rgb(35, 197, 38);
+}
+#new-room-id-cntr{
+    width: 13vh;
+    height: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2vh;
+    visibility: hidden;
+}
+#newRoomID{
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    width: 50%;
+}
+.copy-new-room-id-btn{
+    background: none;
+    outline: none;
+    border: none;
+    float: left;
+    width: 40%;
+    margin-left: 8px;
+}
+.copy-new-room-id-btn:hover{
+    cursor: pointer;
+}
+#copy-msg-alert{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(35, 197, 38);
+    margin-top: 1vh;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    visibility: hidden; 
+}
