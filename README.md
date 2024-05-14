@@ -1,5 +1,5 @@
 # CodeFlow
-**"Embrace the flow. Code with CodeFlow."**
+**"Embrace the flow. Code with CodeFlow."**  `<br>
 Welcome to CodeFlow, the ultimate platform for seamless, real-time collaborative coding and visualization exclusively for JavaScript enthusiasts. Imagine coding with your team, seeing everyone's contributions live, and instantly generating beautiful flowcharts from your code—all in one place. With CodeFlow, you can bring your coding sessions to life, making collaboration more efficient and visually engaging.
 
 ## Key Features
